@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../../redux/categorySlice";
 import { Box, Text } from "@chakra-ui/react";
 
-export default function Category() {
+export default function Category({ setCategory }) {
   const dispatch = useDispatch();
   const { categories } = useSelector((state) => state.categories);
 
@@ -29,6 +29,7 @@ export default function Category() {
               cursor: "pointer",
               bg: "#efebe8",
             }}
+            onClick={() => setCategory(category)}
           >
             {category}
           </Box>

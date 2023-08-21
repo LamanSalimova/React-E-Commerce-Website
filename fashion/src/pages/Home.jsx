@@ -29,10 +29,10 @@ export default function Home() {
         <Box py="20px" my="20px">
           <Flex justify="space-between" gap="20px">
             <Box w="30%" bg="var(--mainColorLight)">
-              <Category />
+              <Category setCategory={setCategory} />
             </Box>
             <Flex w="full" align="center" justify="center">
-              <Products />
+              <Products category={category} />
             </Flex>
           </Flex>
         </Box>

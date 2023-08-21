@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../../redux/productSlice";
+import { getProductCategory, getProducts } from "../../redux/productSlice";
 import Loading from "../Loading";
 import { Box, Grid } from "@chakra-ui/react";
 import Product from "./Product";
 import ReactPaginate from "react-paginate";
 
-export default function Products() {
+export default function Products({ category }) {
   const dispatch = useDispatch();
   const { products, productsStatus } = useSelector((state) => state.products);
+
   useEffect(() => {
-    dispatch(getProducts());
-  }, [dispatch]);
+    if (category) {
+      dispatch(getProductCategory(category));
+    } else {
+      dispatch(getProducts());
+    }
+  }, [dispatch, category]);
 
   const itemsPerPage = 6;
   const [itemOffset, setItemOffset] = useState(0);
