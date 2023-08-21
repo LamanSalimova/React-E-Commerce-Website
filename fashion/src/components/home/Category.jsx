@@ -6,7 +6,6 @@ import { Box, Text } from "@chakra-ui/react";
 export default function Category() {
   const dispatch = useDispatch();
   const { categories } = useSelector((state) => state.categories);
-  console.log(categories);
 
   useEffect(() => {
     dispatch(getCategories());
