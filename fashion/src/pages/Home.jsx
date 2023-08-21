@@ -12,18 +12,26 @@ export default function Home() {
       <Banner />
       {/* <Brends /> */}
       <Container maxW="1140px">
-        <Box bg="var(--mainColor)" py="20px">
+        <Flex
+          justify="end"
+          align="start"
+          bg="var(--mainColorLight)"
+          my="20px"
+          py="30px"
+        >
+          <Box w="20%">
+            <Sorting />
+          </Box>
+        </Flex>
+        <Box py="20px" bg="var(--mainColorLight)" my="20px">
           <Flex justify="space-between">
-            <Box flex="1">
+            <Box w="30%">
               <Category />
             </Box>
-            <Flex flex="1" textAlign="end">
-              <Sorting />
-            </Flex>
+            <Flex w="full">Products</Flex>
           </Flex>
         </Box>
       </Container>
-      <Banner />
     </>
   );
 }

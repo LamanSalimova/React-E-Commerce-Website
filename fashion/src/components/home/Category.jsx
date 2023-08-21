@@ -13,11 +13,24 @@ export default function Category() {
   }, [dispatch]);
 
   return (
-    <Box>
-      <h5>CATEGORIES</h5>
+    <Box p="30px">
+      <Text fontSize="22px" fontWeight="bold" px="10px">
+        CATEGORIES
+      </Text>
       {categories.map((category, i) => {
         return (
-          <Box key={i} py="6px" my="10px" bg="gray.100">
+          <Box
+            key={i}
+            py="6px"
+            px="10px"
+            my="10px"
+            fontSize="18px"
+            fontWeight="600"
+            _hover={{
+              cursor: "pointer",
+              bg: "#efebe8",
+            }}
+          >
             {category}
           </Box>
         );
