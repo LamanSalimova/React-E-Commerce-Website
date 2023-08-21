@@ -23,9 +23,9 @@ export default function Home() {
             <Sorting />
           </Box>
         </Flex>
-        <Box py="20px" bg="var(--mainColorLight)" my="20px">
+        <Box py="20px" my="20px">
           <Flex justify="space-between">
-            <Box w="30%">
+            <Box w="30%" bg="var(--mainColorLight)">
               <Category />
             </Box>
             <Flex w="full">Products</Flex>
