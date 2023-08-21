@@ -6,7 +6,7 @@ import { Box, Grid } from "@chakra-ui/react";
 import Product from "./Product";
 import ReactPaginate from "react-paginate";
 
-export default function Products({ category }) {
+export default function Products({ category, sort }) {
   const dispatch = useDispatch();
   const { products, productsStatus } = useSelector((state) => state.products);
 
@@ -44,9 +44,13 @@ export default function Products({ category }) {
             gap={6}
             w="full"
           >
-            {currentItems?.map((product, id) => (
-              <Product key={id} product={product} />
-            ))}
+            {currentItems
+              ?.sort((a, b) =>
+                sort === "increment" ? a.price - b.price : b.price - a.price
+              )
+              .map((product, id) => (
+                <Product key={id} product={product} />
+              ))}
           </Grid>
           <ReactPaginate
             className="paginate"

@@ -23,7 +23,7 @@ export default function Home() {
           py="30px"
         >
           <Box w="20%">
-            <Sorting />
+            <Sorting setSort={setSort} />
           </Box>
         </Flex>
         <Box py="20px" my="20px">
@@ -32,7 +32,7 @@ export default function Home() {
               <Category setCategory={setCategory} />
             </Box>
             <Flex w="full" align="center" justify="center">
-              <Products category={category} />
+              <Products category={category} sort={sort} />
             </Flex>
           </Flex>
         </Box>
