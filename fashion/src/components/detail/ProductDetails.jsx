@@ -1,13 +1,6 @@
-import {
-  Image,
-  Text,
-  Flex,
-  Container,
-  Box,
-  Grid,
-  Stack,
-} from "@chakra-ui/react";
+import { Image, Text, Flex, Container, Grid, Stack } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import stroke from "../../assets/images/icons/stroke.png";
 import star from "../../assets/images/icons/star.png";
 import visaIcon from "../../assets/images/icons/visa.png";
@@ -19,7 +12,9 @@ import {
   BiLogoTwitter,
   BiLogoPinterestAlt,
 } from "react-icons/bi";
+import { addToCart } from "../../redux/cartSlice";
 export default function ProductDetails({ productDetail }) {
+  const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(0);
 
   const decrement = () => {
@@ -28,6 +23,19 @@ export default function ProductDetails({ productDetail }) {
   const increment = () => {
     if (quantity < productDetail?.rating?.count) setQuantity(quantity + 1);
   };
+  console.log(quantity, "quantity");
+  const addBasket = () => {
+    dispatch(
+      addToCart({
+        id: productDetail?.id,
+        title: productDetail?.title,
+        price: productDetail?.price,
+        image: productDetail?.image,
+        quantity: quantity,
+      })
+    );
+  };
+
   return (
     <Container maxW="1140px">
       <Text
@@ -167,6 +175,7 @@ export default function ProductDetails({ productDetail }) {
                   opacity: "0.9",
                   transition: "0.3s",
                 }}
+                onClick={addBasket}
               >
                 <AiOutlineShoppingCart size={20} />
                 Add to cart

@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from "./components/Header";
 import Details from "./pages/Details";
+import ShoppingCart from "./pages/ShoppingCart";
 export default function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ export default function App() {
         <Route path={ROUTES.HOME} element={<Home />} exact />
         <Route path={ROUTES.ABOUT} element={<About />} exact />
         <Route path={ROUTES.PRODUCTDETAILS} element={<Details />} exact />
+        <Route path={ROUTES.SHOPPINGCART} element={<ShoppingCart />} exact />
       </Routes>
     </Router>
   );

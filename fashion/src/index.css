@@ -9,9 +9,14 @@
 :root {
   --dark: #000;
   --darkTextColor: #191919;
+  --darkTextColor2: #424551;
+  --darkTextColor3: #393b45;
   --lightTextColor: #7f7f7f;
+  --lightBorderColor: #f0f1f2;
+  --lightBgColor: #f4f5f6;
   --light: #fff;
   --mainColor: #ebd96b;
+  --mainColor2: #17696a;
   --mainColorLight: #e7e6e6;
 }
 
@@ -68,4 +73,12 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.applyInput {
+  border: none;
+  outline: none;
+  border: 1px solid var(--lightBorderColor);
+  border-radius: 4px;
+  padding: 10px;
+  color: var(--lightTextColor);
 }
