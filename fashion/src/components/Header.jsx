@@ -1,28 +1,40 @@
 import React, { useEffect, useState } from "react";
-import { Container, Flex, Box, Text, Image, Button } from "@chakra-ui/react";
+import { Container, Flex, Box, Image } from "@chakra-ui/react";
 import logo from "../assets/images/icons/logo.png";
 import logoText from "../assets/images/icons/logoText.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { getCartTotal } from "../redux/cartSlice";
+import { useNavigate } from "react-router-dom";
+
 export default function Header() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { carts } = useSelector((state) => state.carts);
+
+  useEffect(() => {
+    dispatch(getCartTotal());
+  }, [dispatch]);
+
   // ============Sticky Header=================
   const [isSticky, setIsSticky] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 100) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY >= 100) {
+  //       setIsSticky(true);
+  //     } else {
+  //       setIsSticky(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  const stickyHeader = `${isSticky ? "sticky" : ""}`;
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+  // const stickyHeader = `${isSticky ? "sticky" : ""}`;
 
   return (
     <Container maxW="1140px">
@@ -37,22 +49,22 @@ export default function Header() {
         <Flex gap="10px">
           <Image src={logo} alt="logo" w="full" h="full" />
           <Image src={logoText} alt="logo" w="full" h="full" />
-          {/* <Text as="h1" >FASHION</Text> */}
         </Flex>
         <Flex align="center" gap="20px">
           <nav>
             <ul>
               <Flex gap="30px">
                 <li>Catalog</li>
-                {/* <li>Fashion</li> */}
                 <li>Favourite</li>
               </Flex>
             </ul>
           </nav>
-          <Box position="relative">
-            {/* <RouterLink to={ROUTES.SHOPPINGCART}> */}
+          <Box
+            position="relative"
+            onClick={() => navigate("cart")}
+            _hover={{ cursor: "pointer" }}
+          >
             <AiOutlineShoppingCart size={30} />
-            {/* </RouterLink> */}
             <Flex
               position="absolute"
               top="-5px"
@@ -65,7 +77,7 @@ export default function Header() {
               justifyContent="center"
               alignItems="center"
             >
-              5
+              {carts?.length}
             </Flex>
           </Box>
 
