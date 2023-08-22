@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductCategory, getProducts } from "../../redux/productSlice";
 import Loading from "../Loading";
-import { Box, Grid } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import Product from "./Product";
 import ReactPaginate from "react-paginate";
 

@@ -1,18 +1,21 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  GridItem,
-  Image,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 export default function Product({ product }) {
+  const navigate = useNavigate();
   return (
-    <Box w="full" px="20px" pb="40px" border="1px solid var(--mainColorLight)">
+    <Box
+      onClick={() => navigate(`products/${product.id}`)}
+      w="full"
+      px="20px"
+      pb="40px"
+      border="1px solid var(--mainColorLight)"
+      _hover={{
+        cursor: "pointer",
+      }}
+    >
       <Image src={product?.image} w="200px" h="200px" />
 
       <Box py="20px" mt="10px">
