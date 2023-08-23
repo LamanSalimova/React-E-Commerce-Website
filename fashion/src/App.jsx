@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Header from "./components/Header";
 import Details from "./pages/Details";
 import ShoppingCart from "./pages/ShoppingCart";
+import Footer from "./components/Footer";
 export default function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ export default function App() {
         <Route path={ROUTES.PRODUCTDETAILS} element={<Details />} exact />
         <Route path={ROUTES.SHOPPINGCART} element={<ShoppingCart />} exact />
       </Routes>
+      <Footer />
     </Router>
   );
 }
