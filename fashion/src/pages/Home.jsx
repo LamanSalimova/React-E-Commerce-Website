@@ -7,6 +7,7 @@ import Category from "../components/home/Category";
 import Sorting from "../components/home/Sorting";
 import Products from "../components/home/Products";
 import Subscribe from "../components/Subscribe";
+import Services from "../components/Services";
 
 export default function Home() {
   const [sort, setSort] = useState("");
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <Banner />
       {/* <Brends /> */}
+      <Services />
       <Container maxW="1140px">
         <Flex
           justify="end"
