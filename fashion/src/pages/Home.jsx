@@ -9,6 +9,7 @@ import Products from "../components/home/Products";
 import Subscribe from "../components/Subscribe";
 import Services from "../components/Services";
 import Social from "../components/Social";
+import Cta from "../components/Cta";
 
 export default function Home() {
   const [sort, setSort] = useState("");
@@ -17,6 +18,7 @@ export default function Home() {
     <>
       <Banner />
       <Brends />
+      <Cta />
       <Services />
       <Social />
       <Container maxW="1140px">
