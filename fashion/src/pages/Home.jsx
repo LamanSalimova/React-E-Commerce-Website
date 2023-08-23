@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Banner />
-      {/* <Brends /> */}
+      <Brends />
       <Services />
       <Container maxW="1140px">
         <Flex

@@ -34,7 +34,7 @@ export default function Services() {
   return (
     <Container maxW="1140px">
       <Flex
-        justify={{ base: "center", md: "space-between", lg: "space-between" }}
+        justify={{ base: "center", md: "center", lg: "space-between" }}
         py="40px"
         wrap="wrap"
         gap={{ base: "20px", md: "30px", lg: "0" }}

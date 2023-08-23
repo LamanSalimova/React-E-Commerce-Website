@@ -1,14 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
 import { Box, Image, Flex, Container } from "@chakra-ui/react";
-import img1 from "../../assets/images/brands/amazon.png";
-// import img2 from "../assets/images/brands/h&m.png";
-import img3 from "../../assets/images/brands/lacoste.png";
-import img4 from "../../assets/images/brands/laperla.png";
-import img5 from "../../assets/images/brands/levis.png";
-import img6 from "../../assets/images/brands/ysl.png";
-import img7 from "../../assets/images/brands/shopify.png";
-import img8 from "../../assets/images/brands/zara.png";
+import img1 from "../../assets/images/brands/brand1.png";
+import img2 from "../../assets/images/brands/brand2.png";
+import img3 from "../../assets/images/brands/brand3.png";
+import img4 from "../../assets/images/brands/brand4.png";
+import img5 from "../../assets/images/brands/brand5.png";
+import img6 from "../../assets/images/brands/brand6.png";
 
 export default function Brends() {
   var settings = {
@@ -57,7 +55,7 @@ export default function Brends() {
     },
     {
       id: 2,
-      imageUrl: img5,
+      imageUrl: img2,
     },
     {
       id: 3,
@@ -77,16 +75,12 @@ export default function Brends() {
     },
     {
       id: 7,
-      imageUrl: img7,
-    },
-    {
-      id: 8,
-      imageUrl: img8,
+      imageUrl: img3,
     },
   ];
 
   return (
-    <Box bg="var(--mainColor)">
+    <Box py="20px">
       <Container maxW="1140px">
         <Slider {...settings} backgroundColor="blue">
           {brendsData.map((item) => {
@@ -98,7 +92,7 @@ export default function Brends() {
                 align="center"
                 justify="center"
               >
-                <Image src={item.imageUrl} w="160px" />
+                <Image src={item.imageUrl} />
               </Flex>
             );
           })}
