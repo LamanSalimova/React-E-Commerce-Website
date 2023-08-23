@@ -8,6 +8,7 @@ import Sorting from "../components/home/Sorting";
 import Products from "../components/home/Products";
 import Subscribe from "../components/Subscribe";
 import Services from "../components/Services";
+import Social from "../components/Social";
 
 export default function Home() {
   const [sort, setSort] = useState("");
@@ -17,6 +18,7 @@ export default function Home() {
       <Banner />
       <Brends />
       <Services />
+      <Social />
       <Container maxW="1140px">
         <Flex
           justify="end"

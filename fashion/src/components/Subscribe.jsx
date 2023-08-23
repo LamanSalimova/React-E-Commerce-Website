@@ -42,7 +42,7 @@ export default function Subscribe() {
                 <Flex
                   justify="center"
                   align="center"
-                  bg="var(--mainColor2)"
+                  bg="var(--primary)"
                   color="var(--light)"
                   px="40px"
                   borderRadius="4px"
