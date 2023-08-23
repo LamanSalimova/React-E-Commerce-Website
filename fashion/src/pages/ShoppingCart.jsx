@@ -16,7 +16,8 @@ export default function ShoppingCart() {
 
   useEffect(() => {
     dispatch(getCartTotal());
-  }, [dispatch]);
+  }, [dispatch, carts]);
+
   return (
     <Container maxW="1140px">
       <Text fontSize="36px" fontWeight="500">

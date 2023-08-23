@@ -10,11 +10,11 @@ import { useNavigate } from "react-router-dom";
 export default function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { carts } = useSelector((state) => state.carts);
+  const { carts, itemCount } = useSelector((state) => state.carts);
 
   useEffect(() => {
     dispatch(getCartTotal());
-  }, [dispatch]);
+  }, [dispatch, carts]);
 
   // ============Sticky Header=================
   const [isSticky, setIsSticky] = useState(false);
@@ -77,7 +77,8 @@ export default function Header() {
               justifyContent="center"
               alignItems="center"
             >
-              {carts?.length}
+              {itemCount}
+              {/* {carts?.length} */}
             </Flex>
           </Box>
 

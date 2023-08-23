@@ -3,7 +3,7 @@ import React from "react";
 import { removeFromCart } from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
 
-export default function Cart({ cart }) {
+export default function CartItem({ cart }) {
   const dispatch = useDispatch();
   return (
     <Flex borderBottom="1px solid gray" pb={2}>
@@ -15,6 +15,9 @@ export default function Cart({ cart }) {
       </Text>
       <Text mx="14px" minW="60px">
         ${cart?.price}
+        <Text as="span" mx={1}>
+          ({cart?.quantity})
+        </Text>
       </Text>
       <Flex
         align="center"
