@@ -6,6 +6,7 @@ import { Box, Container, Flex } from "@chakra-ui/react";
 import Category from "../components/home/Category";
 import Sorting from "../components/home/Sorting";
 import Products from "../components/home/Products";
+import Subscribe from "../components/Subscribe";
 
 export default function Home() {
   const [sort, setSort] = useState("");
@@ -37,6 +38,7 @@ export default function Home() {
           </Flex>
         </Box>
       </Container>
+      <Subscribe />
     </>
   );
 }
