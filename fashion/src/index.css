@@ -18,8 +18,12 @@
   --lightTextColor2: #72747b;
   --lightTextColor3: #787a80;
   --lightTextColor4: #a5a6ab;
+  --lightTextColor5: #9a9ca5;
   --lightBorderColor: #f0f1f2;
+  --lightBorderColor2: #d7dadd;
   --lightBgColor: #f4f5f6;
+  --lightBgColor2: #efeff0;
+  --lightBgColor3: #e3eded;
   --light: #fff;
   --mainColor: #ebd96b;
   --primary: #17696a;
@@ -87,4 +91,14 @@ li {
   border-radius: 4px;
   padding: 10px;
   color: var(--lightTextColor);
+}
+
+.loginInput {
+  border: none;
+  outline: none;
+  border: 1px solid var(--lightBorderColor2);
+  border-radius: 4px;
+  padding: 10px 4px;
+  font-size: 14px;
+  color: var(--lightTextColor5);
 }
