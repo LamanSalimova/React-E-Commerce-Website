@@ -17,6 +17,7 @@
   --lightTextColor: #7f7f7f;
   --lightTextColor2: #72747b;
   --lightTextColor3: #787a80;
+  --lightTextColor4: #a5a6ab;
   --lightBorderColor: #f0f1f2;
   --lightBgColor: #f4f5f6;
   --light: #fff;
@@ -26,7 +27,7 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif !important;
   /* overflow-x: hidden; */
 }
 

@@ -6,10 +6,10 @@ import About from "./pages/About";
 import { ROUTES } from "./utils/routes";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Header from "./components/Header";
 import Details from "./pages/Details";
 import ShoppingCart from "./pages/ShoppingCart";
 import Footer from "./components/Footer";
+import Header from "./components/header/Header";
 export default function App() {
   return (
     <Router>

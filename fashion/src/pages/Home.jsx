@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
 import Banner from "../components/home/Banner";
 import Brends from "../components/home/Brends";
 import { Box, Container, Flex } from "@chakra-ui/react";
