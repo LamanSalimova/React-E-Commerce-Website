@@ -4,9 +4,10 @@ import logo from "../../assets/images/logo/logo.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartTotal } from "../../redux/cartSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SpecialOffer from "../SpecialOffer";
 import Topbar from "./Topbar";
+import { ROUTES } from "../../utils/routes";
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -44,22 +45,30 @@ export default function Header() {
         <Flex
           justify="space-between"
           align="center"
-          py="30px"
+          py="20px"
           position="sticky"
           top="0"
           left="0"
         >
-          <Box>
+          <Link to={ROUTES.HOME}>
             <Image src={logo} alt="logo" w="full" h="full" />
-          </Box>
+          </Link>
           <Flex align="center" gap="20px">
             <nav>
               <ul>
                 <Flex gap="30px">
-                  <li>Catalog</li>
-                  <li>Favourite</li>
-                  <li>Blog</li>
-                  <li>Contacts</li>
+                  <li>
+                    <Link>Blog</Link>
+                  </li>
+                  <li>
+                    <Link>Favourite</Link>
+                  </li>
+                  <li>
+                    <Link>Stores</Link>
+                  </li>
+                  <li>
+                    <Link to={ROUTES.CONTACT}>Contacts</Link>
+                  </li>
                 </Flex>
               </ul>
             </nav>

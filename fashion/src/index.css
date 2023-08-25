@@ -102,3 +102,11 @@ li {
   font-size: 14px;
   color: var(--lightTextColor5);
 }
+.contactInput {
+  border: none;
+  outline: none;
+  border: 1px solid var(--lightBorderColor2);
+  border-radius: 4px;
+  padding: 10px;
+  color: var(--lightTextColor);
+}

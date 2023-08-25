@@ -72,7 +72,7 @@ export default function Register({ onSignInClick, onCloseSignInModal }) {
               cursor: "pointer",
             }}
           >
-            Sign in
+            Sign up
           </Flex>
           <Text>
             Already have an account?
