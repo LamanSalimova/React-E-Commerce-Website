@@ -11,6 +11,7 @@ import ShoppingCart from "./pages/ShoppingCart";
 import Footer from "./components/Footer";
 import Header from "./components/header/Header";
 import Contact from "./pages/Contact";
+import Stores from "./pages/Stores";
 export default function App() {
   return (
     <Router>
@@ -20,6 +21,7 @@ export default function App() {
         <Route path={ROUTES.ABOUT} element={<About />} exact />
         <Route path={ROUTES.PRODUCTDETAILS} element={<Details />} exact />
         <Route path={ROUTES.SHOPPINGCART} element={<ShoppingCart />} exact />
+        <Route path={ROUTES.STORES} element={<Stores />} exact />
         <Route path={ROUTES.CONTACT} element={<Contact />} exact />
       </Routes>
       <Footer />

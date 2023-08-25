@@ -64,7 +64,7 @@ export default function Header() {
                     <Link>Favourite</Link>
                   </li>
                   <li>
-                    <Link>Stores</Link>
+                    <Link to={ROUTES.STORES}>Stores</Link>
                   </li>
                   <li>
                     <Link to={ROUTES.CONTACT}>Contacts</Link>
