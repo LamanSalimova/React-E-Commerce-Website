@@ -61,7 +61,7 @@ export default function Header() {
                     <Link>Blog</Link>
                   </li>
                   <li>
-                    <Link>Favourite</Link>
+                    <Link to={ROUTES.FAG}>FAQ</Link>
                   </li>
                   <li>
                     <Link to={ROUTES.STORES}>Stores</Link>
