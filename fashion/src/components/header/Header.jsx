@@ -58,7 +58,7 @@ export default function Header() {
               <ul>
                 <Flex gap="30px">
                   <li>
-                    <Link>Blog</Link>
+                    <Link to={ROUTES.BLOG}>Blog</Link>
                   </li>
                   <li>
                     <Link to={ROUTES.FAG}>FAQ</Link>

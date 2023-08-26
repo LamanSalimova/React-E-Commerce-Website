@@ -110,3 +110,8 @@ li {
   padding: 10px;
   color: var(--lightTextColor);
 }
+.searchInput {
+  border: none;
+  outline: none;
+  color: var(--lightTextColor);
+}

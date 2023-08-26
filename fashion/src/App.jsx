@@ -13,6 +13,7 @@ import Header from "./components/header/Header";
 import Contact from "./pages/Contact";
 import Stores from "./pages/Stores";
 import FAQ from "./pages/FAQ";
+import Blog from "./pages/Blog";
 export default function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ export default function App() {
         <Route path={ROUTES.ABOUT} element={<About />} exact />
         <Route path={ROUTES.PRODUCTDETAILS} element={<Details />} exact />
         <Route path={ROUTES.SHOPPINGCART} element={<ShoppingCart />} exact />
+        <Route path={ROUTES.BLOG} element={<Blog />} exact />
         <Route path={ROUTES.STORES} element={<Stores />} exact />
         <Route path={ROUTES.FAG} element={<FAQ />} exact />
         <Route path={ROUTES.CONTACT} element={<Contact />} exact />
