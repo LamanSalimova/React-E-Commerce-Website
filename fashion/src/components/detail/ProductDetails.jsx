@@ -43,6 +43,7 @@ export default function ProductDetails({ productDetail }) {
         fontWeight="600"
         pb="16px"
         borderBottom="1px solid #d1d2d7"
+        mt="20px"
       >
         {productDetail?.title}
       </Text>
@@ -110,7 +111,7 @@ export default function ProductDetails({ productDetail }) {
                 <Flex
                   w="20px"
                   h="20px"
-                  border="1px solid var(--mainColor)"
+                  border="1px solid var(--primary)"
                   borderRadius="4px"
                   p="16px"
                   fontSize="18px"
@@ -118,7 +119,7 @@ export default function ProductDetails({ productDetail }) {
                   justify="center"
                   align="center"
                   _hover={{
-                    bg: "var(--mainColor)",
+                    bg: "var(--primary)",
                     color: "var(--light)",
                     cursor: "pointer",
                     transition: "0.3s",
@@ -130,7 +131,7 @@ export default function ProductDetails({ productDetail }) {
                 <Flex
                   w="20px"
                   h="20px"
-                  border="1px solid var(--mainColor)"
+                  border="1px solid var(--primary)"
                   borderRadius="4px"
                   p="16px"
                   fontSize="18px"
@@ -143,7 +144,7 @@ export default function ProductDetails({ productDetail }) {
                 <Flex
                   w="20px"
                   h="20px"
-                  border="1px solid var(--mainColor)"
+                  border="1px solid var(--primary)"
                   borderRadius="4px"
                   p="16px"
                   fontSize="18px"
@@ -151,7 +152,7 @@ export default function ProductDetails({ productDetail }) {
                   justify="center"
                   align="center"
                   _hover={{
-                    bg: "var(--mainColor)",
+                    bg: "var(--primary)",
                     color: "var(--light)",
                     cursor: "pointer",
                     transition: "0.3s",
@@ -164,7 +165,7 @@ export default function ProductDetails({ productDetail }) {
               <Flex
                 align="center"
                 justify="center"
-                bg="var(--mainColor)"
+                bg="var(--primary)"
                 color="var(--light)"
                 px="30px"
                 py="10px"

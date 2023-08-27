@@ -69,6 +69,25 @@ li {
   font-weight: 500;
 }
 
+option {
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  outline: none;
+}
+
+select {
+  outline: none !important;
+  font-size: 14px;
+  border: none;
+  /* width: 100%; */
+  background: var(--lightBgColor2);
+}
+select:focus {
+  border-color: red !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
 .paginate {
   display: flex;
   align-items: center;

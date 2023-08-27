@@ -26,10 +26,10 @@ export default function CartItem({ cart }) {
         h="40px"
         px="20px"
         py="10px"
-        border="1px solid var(--mainColor)"
+        border="1px solid #e53e3e"
         borderRadius="4px"
         _hover={{
-          bg: "var(--mainColor)",
+          bg: "red.500",
           color: "var(--light)",
           cursor: "pointer",
           transition: "0.3s",

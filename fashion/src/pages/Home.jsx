@@ -24,7 +24,7 @@ export default function Home() {
         <Flex
           justify="end"
           align="start"
-          bg="var(--mainColorLight)"
+          bg="var(--lightBgColor)"
           my="20px"
           py="30px"
         >
@@ -34,7 +34,7 @@ export default function Home() {
         </Flex>
         <Box py="20px" my="20px">
           <Flex justify="space-between" gap="20px">
-            <Box w="30%" bg="var(--mainColorLight)">
+            <Box w="30%" bg="var(--lightBgColor)">
               <Category setCategory={setCategory} />
             </Box>
             <Flex w="full" align="center" justify="center">

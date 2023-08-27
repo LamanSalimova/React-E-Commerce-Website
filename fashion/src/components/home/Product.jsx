@@ -33,7 +33,8 @@ export default function Product({ product }) {
           <Flex
             p="10px"
             borderRadius="5px"
-            bg="var(--mainColor)"
+            bg="var(--primary)"
+            color="var(--lightBgColor2)"
             align="center"
             justify="center"
             _hover={{

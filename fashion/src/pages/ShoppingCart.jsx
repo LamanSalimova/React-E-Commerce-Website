@@ -54,7 +54,7 @@ export default function ShoppingCart() {
                 <Flex
                   justify="center"
                   align="center"
-                  bg="var(--mainColor2)"
+                  bg="var(--primary)"
                   color="var(--light)"
                   px="40px"
                   borderRadius="4px"
@@ -118,7 +118,7 @@ export default function ShoppingCart() {
             </Stack>
             <Flex
               w="full"
-              bg="var(--mainColor2)"
+              bg="var(--primary)"
               color="var(--light)"
               align="center"
               justify="center"

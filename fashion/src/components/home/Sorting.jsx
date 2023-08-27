@@ -6,8 +6,9 @@ export default function Sorting({ setSort }) {
     <Select
       onChange={(e) => setSort(e.target.value)}
       placeholder="All"
-      bg="#fff5bf"
+      bg="var(--lightBorderColor3)"
       outline="none"
+      border="none"
     >
       <option value="increment">Price: Low to High</option>
       <option value="decrement">Price: High to Low</option>
