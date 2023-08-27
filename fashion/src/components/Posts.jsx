@@ -8,9 +8,18 @@ export default function Posts() {
   return (
     <>
       <Stack w="full">
+        <Text
+          as="h4"
+          fontSize="24px"
+          lineHeight="32px"
+          fontWeight="700"
+          color="var(--darkBgColor)"
+        >
+          Featured Posts
+        </Text>
         <Flex align="center">
-          <Box w="80%" h="full">
-            <Image src={img1} alt="post-image" objectFit="contain" />
+          <Box minW="118px">
+            <Image src={img1} alt="post-image" w="100px" h="100px" />
           </Box>
           <Stack>
             <Flex gap="6px" color="var(--lightTextColor3)" align="center">
@@ -20,16 +29,16 @@ export default function Posts() {
             <Text
               fontWeight="700"
               color="var(--darkBgColor)"
-              _hover={{ color: "var(--primary)" }}
+              _hover={{ color: "var(--primary)", transition: "0.6s" }}
             >
               14 Items From End-of-Spring Sales Are Sure to Spark Joy
             </Text>
           </Stack>
         </Flex>
       </Stack>
-      <Stack w="full">
+      <Stack>
         <Flex align="center">
-          <Box w="80%" h="full">
+          <Box minW="118px">
             <Image src={img2} alt="post-image" objectFit="contain" />
           </Box>
           <Stack>
@@ -40,16 +49,16 @@ export default function Posts() {
             <Text
               fontWeight="700"
               color="var(--darkBgColor)"
-              _hover={{ color: "var(--primary)" }}
+              _hover={{ color: "var(--primary)", transition: "0.6s" }}
             >
               Best Fashion Instagrams of the Week
             </Text>
           </Stack>
         </Flex>
       </Stack>
-      <Stack w="full">
+      <Stack>
         <Flex align="center">
-          <Box w="80%" h="full">
+          <Box minW="118px">
             <Image src={img3} alt="post-image" objectFit="contain" />
           </Box>
           <Stack>
@@ -60,7 +69,7 @@ export default function Posts() {
             <Text
               fontWeight="700"
               color="var(--darkBgColor)"
-              _hover={{ color: "var(--primary)" }}
+              _hover={{ color: "var(--primary)", transition: "0.6s" }}
             >
               Top 10 Looks from the Venice Film Festival
             </Text>

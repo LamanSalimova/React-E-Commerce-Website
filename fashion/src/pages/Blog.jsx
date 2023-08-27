@@ -11,6 +11,7 @@ import img3 from "../assets/images/blogs/blog3.png";
 import img4 from "../assets/images/blogs/blog4.png";
 import BlogItem from "../components/BlogItem";
 import Posts from "../components/Posts";
+import Tags from "../components/Tags";
 export default function Blog() {
   const blogsData = [
     {
@@ -68,10 +69,16 @@ export default function Blog() {
         </Container>
       </Box>
       <Container maxW="1140px">
-        <Flex justify="space-between" align="center" my="22px">
+        <Flex
+          justify="space-between"
+          align="center"
+          my="22px"
+          flexDirection={{ base: "column", md: "row", xl: "row" }}
+          gap={{ base: "30px", md: "0", xl: "0" }}
+        >
           <Text
             as="h2"
-            fontSize="46px"
+            fontSize={{ base: "30px", md: "46px", xl: "46px" }}
             lineHeight="60px"
             fontWeight="900"
             color="var(--darkBgColor)"
@@ -98,7 +105,7 @@ export default function Blog() {
         <Grid
           templateColumns={{
             base: "1fr",
-            md: "3fr 1fr",
+            md: "3fr 2fr",
             lg: "5fr 2fr",
           }}
           py="40px"
@@ -109,17 +116,9 @@ export default function Blog() {
               <BlogItem key={blog.id} blog={blog} />
             ))}
           </Stack>
-          <Stack>
-            <Text
-              as="h4"
-              fontSize="24px"
-              lineHeight="32px"
-              fontWeight="700"
-              color="var(--darkBgColor)"
-            >
-              Featured Posts
-            </Text>
+          <Stack gap="12px">
             <Posts />
+            <Tags />
           </Stack>
         </Grid>
       </Container>

@@ -7,7 +7,11 @@ export default function BlogItem({ blog }) {
       <Box>
         <Image src={blog.imgUrl} alt="blog-image" w="full" />
       </Box>
-      <Flex gap="10px" color="var(--lightTextColor3)">
+      <Flex
+        gap="10px"
+        color="var(--lightTextColor3)"
+        fontSize={{ base: "12px", md: "16px", xl: "16px" }}
+      >
         <Text>{blog.category}</Text>
         <Text>{blog.date}</Text>
         <Flex gap="10px" align="center">
