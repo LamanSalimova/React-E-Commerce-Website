@@ -16,10 +16,6 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <Brends />
-      <Cta />
-      <Services />
-      <Social />
       <Container maxW="1140px">
         <Flex
           justify="end"
@@ -28,13 +24,21 @@ export default function Home() {
           my="20px"
           py="30px"
         >
-          <Box w="20%">
+          <Box w={{ base: "full", md: "20%", xl: "20%" }}>
             <Sorting setSort={setSort} />
           </Box>
         </Flex>
         <Box py="20px" my="20px">
-          <Flex justify="space-between" gap="20px">
-            <Box w="30%" bg="var(--lightBgColor)">
+          <Flex
+            justify="space-between"
+            gap="20px"
+            flexDirection={{ base: "column", md: "row", xl: "row" }}
+          >
+            <Box
+              w={{ base: "full", md: "30%", xl: "30%" }}
+              minH="300px"
+              bg="var(--lightBgColor)"
+            >
               <Category setCategory={setCategory} />
             </Box>
             <Flex w="full" align="center" justify="center">
@@ -43,6 +47,10 @@ export default function Home() {
           </Flex>
         </Box>
       </Container>
+      <Brends />
+      <Cta />
+      <Services />
+      <Social />
       <Subscribe />
     </>
   );

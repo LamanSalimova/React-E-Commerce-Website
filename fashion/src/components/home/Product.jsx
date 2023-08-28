@@ -16,7 +16,11 @@ export default function Product({ product }) {
         cursor: "pointer",
       }}
     >
-      <Image src={product?.image} w="200px" h="200px" />
+      <Image
+        src={product?.image}
+        w={{ base: "full", md: "200px", xl: "200px" }}
+        h="200px"
+      />
 
       <Box py="20px" mt="10px">
         <Text fontSize="18px" fontWeight="500" minH="100px">

@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Container,
-  Box,
-  Flex,
-  Image,
-  Text,
-  Stack,
-  Button,
-} from "@chakra-ui/react";
+import { Container, Box, Flex, Text, Stack } from "@chakra-ui/react";
 import bannerImg from "../../assets/images/hero/hero.png";
 import hero from "../../assets/images/hero/hero-bg.png";
 
@@ -15,11 +7,12 @@ export default function Banner() {
   return (
     <Box
       width="full"
-      height={{ base: "60vh", md: "80vh", lg: "80vh" }}
+      height={{ base: "70vh", md: "60vh", lg: "80vh" }}
       px="40px"
       pt="40px"
       backgroundImage={hero}
       backgroundSize="cover"
+      backgroundPosition="center"
     >
       <Container maxW="1140px" h="full">
         <Flex
@@ -41,15 +34,19 @@ export default function Banner() {
               New collection
             </Text>
             <Text
-              fontSize="62px"
-              lineHeight="83px"
+              fontSize={{ base: "32px", md: "62px", xl: "62px" }}
+              lineHeight={{ base: "44px", md: "83px", xl: "83px" }}
               fontWeight="900"
               color="var(--darkBgColor)"
               fontFamily="Lato"
             >
               Menswear 2023
             </Text>
-            <Text my="20px" fontSize="20px" fontWeight="600">
+            <Text
+              my={{ base: "0", md: "20px", xl: "20px" }}
+              fontSize="20px"
+              fontWeight="600"
+            >
               Live for influential and innovative fashion!
             </Text>
             <Flex gap="20px" mt="40px">
@@ -62,8 +59,9 @@ export default function Banner() {
                 color="var(--primary)"
                 fontSize="18px"
                 fontWeight="500"
-                px="40px"
+                px={{ base: "20px", md: "40px", xl: "40px" }}
                 py="10px"
+                w="full"
                 _hover={{
                   bg: "var(--primary)",
                   color: "var(--light)",
@@ -85,6 +83,7 @@ export default function Banner() {
                 color="var(--light)"
                 px="40px"
                 py="10px"
+                display={{ base: "none", md: "flex", xl: "flex" }}
                 _hover={{
                   border: "1px solid var(--primary)",
                   color: "var(--primary)",

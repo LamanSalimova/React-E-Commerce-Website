@@ -5,6 +5,7 @@ import { BsChevronRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../utils/routes";
 import AccordionComp from "../components/AccordionComp";
+import Subscribe from "../components/Subscribe";
 export default function FAQ() {
   return (
     <>
@@ -27,6 +28,7 @@ export default function FAQ() {
             lg: "1fr 3fr",
           }}
           py="40px"
+          mb="60px"
           gap={{ base: "20px", md: "30px", lg: "0" }}
         >
           <Text
@@ -43,6 +45,7 @@ export default function FAQ() {
           </Box>
         </Grid>
       </Container>
+      <Subscribe />
     </>
   );
 }

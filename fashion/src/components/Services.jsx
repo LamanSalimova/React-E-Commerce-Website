@@ -39,8 +39,9 @@ export default function Services() {
         wrap="wrap"
         gap={{ base: "20px", md: "30px", lg: "0" }}
       >
-        {servicesData.map((item) => (
+        {servicesData.map((item, id) => (
           <Stack
+            key={id}
             gap="20px"
             py="70px"
             px="20px"

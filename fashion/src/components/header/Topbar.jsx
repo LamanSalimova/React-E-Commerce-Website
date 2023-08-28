@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Container,
   Flex,
   Image,
@@ -14,7 +13,6 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
@@ -35,7 +33,10 @@ export default function Topbar() {
     <Box bg="var(--darkBgColor)">
       <Container maxW="1140px">
         <Flex justify="space-between" align="center" py="8px">
-          <Text color="var(--lightTextColor4)">
+          <Text
+            color="var(--lightTextColor4)"
+            fontSize={{ base: "12px", md: "14px", xl: "16px" }}
+          >
             Available 24/7 at
             <Text as="span" fontWeight="900">
               (405) 555-0128

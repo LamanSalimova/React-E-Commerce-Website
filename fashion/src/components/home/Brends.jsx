@@ -80,7 +80,7 @@ export default function Brends() {
   ];
 
   return (
-    <Box py="20px">
+    <Box py="20px" my="60px">
       <Container maxW="1140px">
         <Slider {...settings} backgroundColor="blue">
           {brendsData.map((item) => {

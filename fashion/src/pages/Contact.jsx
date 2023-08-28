@@ -6,6 +6,7 @@ import { BiMessageRoundedDetail, BiLogoTwitter } from "react-icons/bi";
 import { BsChevronRight, BsPhone } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../utils/routes";
+import Subscribe from "../components/Subscribe";
 export default function Contact() {
   return (
     <>
@@ -28,6 +29,7 @@ export default function Contact() {
             lg: "1fr 3fr",
           }}
           py="40px"
+          mb="80px"
           gap={{ base: "20px", md: "30px", lg: "0" }}
         >
           <Text
@@ -162,6 +164,7 @@ export default function Contact() {
           </Stack>
         </Grid>
       </Container>
+      <Subscribe />
     </>
   );
 }

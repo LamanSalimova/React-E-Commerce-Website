@@ -92,12 +92,14 @@ select:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 32px;
 }
 
 .paginate li {
   width: 30px;
   height: 30px;
   border: 1px solid #ccc;
+  /* border-radius: 50%; */
   margin: 5px;
   display: flex;
   justify-content: center;

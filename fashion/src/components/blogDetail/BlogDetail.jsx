@@ -163,7 +163,12 @@ export default function BlogDetail() {
             </Flex>
           </Flex>
           <Box>
-            <Image src={blog.imgUrl} alt={blog.title} w="full" minH="360px" />
+            <Image
+              src={blog.imgUrl}
+              alt={blog.title}
+              w="full"
+              minH={{ base: "230px", md: "360px", xl: "360px" }}
+            />
           </Box>
 
           <Text

@@ -9,6 +9,7 @@ import img2 from "../assets/images/stores/store2.png";
 import img3 from "../assets/images/stores/store3.png";
 import img4 from "../assets/images/stores/store4.png";
 import StoreCard from "../components/StoreCard";
+import Subscribe from "../components/Subscribe";
 export default function Stores() {
   const storesData = [
     {
@@ -69,6 +70,7 @@ export default function Stores() {
             lg: "1fr 3fr",
           }}
           py="40px"
+          mb="80px"
           gap={{ base: "20px", md: "30px", lg: "0" }}
         >
           <Text
@@ -100,6 +102,7 @@ export default function Stores() {
           </Grid>
         </Grid>
       </Container>
+      <Subscribe />
     </>
   );
 }
