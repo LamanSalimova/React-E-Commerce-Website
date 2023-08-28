@@ -18,85 +18,62 @@ export default function Header() {
     dispatch(getCartTotal());
   }, [dispatch, carts]);
 
-  // ============Sticky Header=================
-  const [isSticky, setIsSticky] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY >= 100) {
-  //       setIsSticky(true);
-  //     } else {
-  //       setIsSticky(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-  // const stickyHeader = `${isSticky ? "sticky" : ""}`;
-
   return (
     <>
-      <Topbar />
-      <Container maxW="1140px">
-        <Flex
-          justify="space-between"
-          align="center"
-          py="20px"
-          position="sticky"
-          top="0"
-          left="0"
-        >
-          <Link to={ROUTES.HOME}>
-            <Image src={logo} alt="logo" w="full" h="full" />
-          </Link>
-          <Flex align="center" gap="20px">
-            <nav>
-              <ul>
-                <Flex gap="30px">
-                  <li>
-                    <Link to={ROUTES.BLOG}>Blog</Link>
-                  </li>
-                  <li>
-                    <Link to={ROUTES.FAG}>FAQ</Link>
-                  </li>
-                  <li>
-                    <Link to={ROUTES.STORES}>Stores</Link>
-                  </li>
-                  <li>
-                    <Link to={ROUTES.CONTACT}>Contacts</Link>
-                  </li>
-                </Flex>
-              </ul>
-            </nav>
-            <Box
-              position="relative"
-              onClick={() => navigate("cart")}
-              _hover={{ cursor: "pointer" }}
-            >
-              <AiOutlineShoppingCart size={30} />
-              <Flex
-                position="absolute"
-                top="-5px"
-                right="-10px"
-                width="20px"
-                height="20px"
-                borderRadius="50%"
-                backgroundColor="var(--primary)"
-                color="#fff"
-                justifyContent="center"
-                alignItems="center"
-              >
-                {itemCount}
-                {/* {carts?.length} */}
+      <Box position="sticky" top="0" zIndex="100">
+        <Topbar />
+        <Box w="full" bg="var(--light)">
+          <Container maxW="1140px">
+            <Flex justify="space-between" align="center" py="20px">
+              <Link to={ROUTES.HOME}>
+                <Image src={logo} alt="logo" w="full" h="full" />
+              </Link>
+              <Flex align="center" gap="20px">
+                <nav>
+                  <ul>
+                    <Flex gap="30px">
+                      <li>
+                        <Link to={ROUTES.BLOG}>Blog</Link>
+                      </li>
+                      <li>
+                        <Link to={ROUTES.FAG}>FAQ</Link>
+                      </li>
+                      <li>
+                        <Link to={ROUTES.STORES}>Stores</Link>
+                      </li>
+                      <li>
+                        <Link to={ROUTES.CONTACT}>Contacts</Link>
+                      </li>
+                    </Flex>
+                  </ul>
+                </nav>
+                <Box
+                  position="relative"
+                  onClick={() => navigate("cart")}
+                  _hover={{ cursor: "pointer" }}
+                >
+                  <AiOutlineShoppingCart size={30} />
+                  <Flex
+                    position="absolute"
+                    top="-5px"
+                    right="-10px"
+                    width="20px"
+                    height="20px"
+                    borderRadius="50%"
+                    backgroundColor="var(--primary)"
+                    color="#fff"
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    {itemCount}
+                    {/* {carts?.length} */}
+                  </Flex>
+                </Box>
               </Flex>
-            </Box>
-          </Flex>
-        </Flex>
-      </Container>
+            </Flex>
+          </Container>
+        </Box>
+      </Box>
       <SpecialOffer />
     </>
   );
