@@ -47,7 +47,7 @@ export default function Home() {
           </Flex>
         </Box>
       </Container>
-      <Brends />
+      {/* <Brends /> */}
       <Cta />
       <Services />
       <Social />
