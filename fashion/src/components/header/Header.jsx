@@ -36,6 +36,31 @@ export default function Header() {
                 <Image src={logo} alt="logo" w="full" h="full" />
               </Link>
               <Box
+                position="relative"
+                ml={{ base: "0", md: "0", xl: "22px" }}
+                mr={{ base: "30px", md: "0", xl: "0" }}
+                display={{ base: "block", md: "none", xl: "none" }}
+                onClick={() => navigate("cart")}
+                _hover={{ cursor: "pointer" }}
+              >
+                <AiOutlineShoppingCart size={30} />
+                <Flex
+                  position="absolute"
+                  top="-5px"
+                  right="-10px"
+                  width="20px"
+                  height="20px"
+                  borderRadius="50%"
+                  backgroundColor="var(--primary)"
+                  color="#fff"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  {itemCount}
+                  {/* {carts?.length} */}
+                </Flex>
+              </Box>
+              <Box
                 className="hamburger"
                 onClick={handleClick}
                 _hover={{
@@ -89,6 +114,7 @@ export default function Header() {
                   <Box
                     position="relative"
                     ml={{ base: "0", md: "0", xl: "22px" }}
+                    display={{ base: "none", md: "block", xl: "block" }}
                     onClick={() => navigate("cart")}
                     _hover={{ cursor: "pointer" }}
                   >

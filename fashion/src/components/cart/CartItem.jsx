@@ -6,14 +6,25 @@ import { useDispatch } from "react-redux";
 export default function CartItem({ cart }) {
   const dispatch = useDispatch();
   return (
-    <Flex borderBottom="1px solid gray" pb={2}>
+    <Flex
+      borderBottom="1px solid gray"
+      flexDirection={{ base: "column", md: "row", xl: "row" }}
+      align={{ base: "center", md: "" }}
+      gap={{ base: "20px", md: "0" }}
+      pb={{ base: "20px", md: "8px" }}
+    >
       <Box minW="120px">
         <Image src={cart?.image} alt="product" w="100px" h="100px" />
       </Box>
-      <Text fontSize="12px" fontWeight="500" minW="310px">
+      <Text
+        fontSize="12px"
+        fontWeight="500"
+        minW="310px"
+        textAlign={{ base: "center", md: "start" }}
+      >
         {cart?.title}
       </Text>
-      <Text mx="14px" minW="60px">
+      <Text mx="14px" minW="70px">
         ${cart?.price}
         <Text as="span" mx={1}>
           ({cart?.quantity})

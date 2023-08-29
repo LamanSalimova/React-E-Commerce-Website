@@ -32,8 +32,7 @@
 }
 
 body {
-  font-family: "Lato", sans-serif !important;
-  /* overflow-x: hidden; */
+  font-family: "Lato", sans-serif;
 }
 
 /* scrollbar */
@@ -43,7 +42,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #c7b3bc;
+  background-color: var(--darkBgColor);
   border-radius: 10px;
 }
 
@@ -80,7 +79,6 @@ select {
   outline: none !important;
   font-size: 14px;
   border: none;
-  /* width: 100%; */
   background: var(--lightBgColor2);
 }
 select:focus {
@@ -162,13 +160,11 @@ select:focus {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    /* justify-content: center; */
     align-items: center;
     padding-top: 80px;
     margin-bottom: 40px;
 
     .flex-in-ul {
-      /* background: purple; */
       flex-direction: column;
       justify-content: center;
       width: 100%;
@@ -177,7 +173,6 @@ select:focus {
     }
 
     .flex-out-nav {
-      /* ishe yaramadi */
       width: 100%;
       height: 100%;
       justify-content: center;
@@ -198,8 +193,6 @@ select:focus {
     flex-direction: column;
 
     .flex-in-ul {
-      /* background: green; */
-
       .flex-in-ul {
         background: orange;
       }
@@ -215,9 +208,7 @@ select:focus {
     flex-direction: column;
 
     .flex-in-ul {
-      /* background: pink; */
       gap: 20px;
-      /* margin-top: 24px; */
     }
   }
 }
