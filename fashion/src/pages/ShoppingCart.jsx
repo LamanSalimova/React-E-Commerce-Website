@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getCartTotal } from "../redux/cartSlice";
 import { Box, Container, Flex, Grid, Stack, Text } from "@chakra-ui/react";
 import CartItem from "../components/cart/CartItem";
+import EmptyCart from "../components/EmptyCart";
 
 export default function ShoppingCart() {
   const dispatch = useDispatch();
@@ -20,9 +21,15 @@ export default function ShoppingCart() {
 
   return (
     <Container maxW="1140px">
-      <Text fontSize="36px" fontWeight="500">
-        Checkout
-      </Text>
+      {carts?.length ? (
+        <Text fontSize="36px" fontWeight="500">
+          Checkout
+        </Text>
+      ) : (
+        <Text fontSize="36px" fontWeight="500">
+          Your cart is empty
+        </Text>
+      )}
 
       {carts?.length ? (
         <Grid
@@ -130,7 +137,9 @@ export default function ShoppingCart() {
           </Stack>
         </Grid>
       ) : (
-        <Box>Your cart is empty</Box>
+        <Box>
+          <EmptyCart />
+        </Box>
       )}
     </Container>
   );
